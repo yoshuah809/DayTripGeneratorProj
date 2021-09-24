@@ -28,3 +28,14 @@ const arrayOfEntertainment = [
   "Scuba Diving",
   "Dirty Racing",
 ];
+
+//Generate Funcion to randon select an element of a given array and return it. it will also will the length of the array in the random number assignment
+function randomGenerator(array) {
+  number = Math.floor(Math.random() * array.length);
+  console.log(array[number]);
+  //return array[number];
+}
+let destination = randomGenerator(destinationsArray);
+let transportation = randomGenerator(arrayOfTransportation);
+let restaurant = randomGenerator(restaurantArray);
+let entertainment = randomGenerator(arrayOfEntertainment);
