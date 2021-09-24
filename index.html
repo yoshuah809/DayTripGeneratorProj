@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!link rel="stylesheet" href="\style.css" />
+  </head>
+  <body>
+    <script src="app.js"></script>
+  </body>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(to top left, #1067d8, #6f79d5);
+    }
+    .button {
+      padding: 8px 16px;
+      display: inline-block;
+      text-decoration: none;
+      border-radius: 3px;
+    }
+    h1 {
+      font-family: sans-serif;
+      font-size: 50px;
+      line-height: 1.3;
+      width: 100%;
+      padding: 30px;
+      text-align: center;
+      color: white;
+    }
+    .button-primary {
+      background: slategray;
+      color: #fff;
+    }
+    .button-primary:hover {
+      background: lightslategray;
+    }
+  </style>
+  <div class="container">
+    <div class="row text-center">
+      <h1>Ready for your Day Trip?</h1>
+      <h2>Get a random Trip generation by clicking below</h2>
+      <button class="button-primary" border="0" type="button" ;id="get_trip">
+        Get Trip ?
+      </button>
+    </div>
+    <div id="trip" class="row trip"></div>
+  </div>
+</html>

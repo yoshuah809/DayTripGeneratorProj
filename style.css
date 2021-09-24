@@ -1,0 +1,22 @@
+body,
+input,
+button {
+  font: 14px trebuchet new, sans-serif;
+}
+.button {
+  padding: 8px 16px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 3px;
+}
+.button-tiny {
+  font-size: 12px;
+  padding: 6px 14px;
+}
+.button-primary {
+  background: slategray;
+  color: #fff;
+}
+.button-primary:hover {
+  background: lightslategray;
+}
