@@ -39,3 +39,15 @@ let destination = randomGenerator(destinationsArray);
 let transportation = randomGenerator(arrayOfTransportation);
 let restaurant = randomGenerator(restaurantArray);
 let entertainment = randomGenerator(arrayOfEntertainment);
+
+let changeOption = 0;
+
+//(5 points): As a user, I want a mode of transportation to be randomly selected for my day trip.
+
+//(15 points): As a user, I want to be able to randomly re-select a destination, restaurant, mode of transportation, and/or form of entertainment if I don’t like one or more of those things.
+alert(`              Destination is: ${destination}
+        Transportation is : ${transportation}
+              Restaurant is : ${restaurant}
+        Entertainment is: : ${entertainment}
+        Would you like to change anything, Select OK to continue.`);
+changeTrip();
