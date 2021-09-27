@@ -61,4 +61,31 @@ function changeTrip() {
          4. Entertainment  --  Current is ${entertainment}
          5. No change Needed Confirm Trip.`)
   );
+  validateOption(changeOption);
+}
+
+function validateOption(changeOption) {
+  switch (changeOption) {
+    case 1:
+      destination = randomGenerator(destinationsArray);
+      changeTrip();
+      break;
+    case 2:
+      transportation = randomGenerator(arrayOfTransportation);
+      changeTrip();
+      break;
+    case 3:
+      restaurant = randomGenerator(restaurantArray);
+      changeTrip();
+      break;
+    case 4:
+      entertainment = randomGenerator(arrayOfEntertainment);
+      changeTrip();
+      break;
+    case 5:
+      confirmTrip();
+      break;
+    default:
+      confirmTrip();
+  }
 }
