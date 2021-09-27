@@ -1,9 +1,8 @@
 // Learning objective: Use and practice JavaScript fundamentals, with an emphasis on Single Responsibility.
 //(5 points): As a developer, I want to make at least three commits.
 
-// (5 points): As a user, I want a destination to be randomly selected for my day trip.
 
-//5 points): As a user, I want a restaurant to be randomly selected for my day trip.
+//Creating the Arrays to Ramdomly been selected by
 const restaurantArray = [
   "Crackle Barrel",
   "Aplebees",
@@ -28,21 +27,23 @@ const arrayOfEntertainment = [
   "Scuba Diving",
   "Dirty Racing",
 ];
+// (5 points): As a user, I want a destination to be randomly selected for my day trip.
+let destination = randomGenerator(destinationsArray);
 
-//Generate Funcion to randon select an element of a given array and return it. it will also will the length of the array in the random number assignment
+//5 points): As a user, I want a restaurant to be randomly selected for my day trip.
+
+//Generate Funcion to randon select an element of a given array and return it.
 function randomGenerator(array) {
   number = Math.floor(Math.random() * array.length);
-  console.log(array[number]);
-  //return array[number];
+  return array[number];
 }
-let destination = randomGenerator(destinationsArray);
-let transportation = randomGenerator(arrayOfTransportation);
+
 let restaurant = randomGenerator(restaurantArray);
 let entertainment = randomGenerator(arrayOfEntertainment);
-
 let changeOption = 0;
 
 //(5 points): As a user, I want a mode of transportation to be randomly selected for my day trip.
+let transportation = randomGenerator(arrayOfTransportation);
 
 //(15 points): As a user, I want to be able to randomly re-select a destination, restaurant, mode of transportation, and/or form of entertainment if I don’t like one or more of those things.
 alert(`              Destination is: ${destination}
@@ -51,7 +52,6 @@ alert(`              Destination is: ${destination}
         Entertainment is: : ${entertainment}
         Would you like to change anything, Select OK to continue.`);
 changeTrip();
-
 function changeTrip() {
   changeOption = Number(
     prompt(`Would to like to change anything, Select an option
@@ -63,7 +63,6 @@ function changeTrip() {
   );
   validateOption(changeOption);
 }
-
 function validateOption(changeOption) {
   switch (changeOption) {
     case 1:
@@ -88,4 +87,19 @@ function validateOption(changeOption) {
     default:
       confirmTrip();
   }
+}
+
+function displayTripInformation() {
+  alert(`              Destination is: ${destination}
+        Transportation is : ${transportation}
+              Restaurant is : ${restaurant}
+        Entertainment is: : ${entertainment}`);
+}
+function confirmTrip() {
+  console.log(`Your Trip is confirmed with the following information
+  Destination is: ${destination}
+  Transportation is : ${transportation}
+        Restaurant is : ${restaurant}
+  Entertainment is:  ${entertainment}
+  Enjoy your Trip`);
 }
